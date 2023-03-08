@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+<TITLE>theForger's Win32 API Tutorial</TITLE>
+</HEAD>
+<LINK HREF="style.css" REL="STYLESHEET" TYPE="text/css">
+<BODY>
+<FONT SIZE="-1">
+[ <A HREF="./index.html">contents</A>
+| <A HREF="http://www.winprog.org/">#winprog</A>
+]
+</FONT>
+<HR>
+
+
+<P>
+<TABLE ALIGN="right" ID="Table1">
+<TR>
+	<TD ALIGN="center" STYLE="border: 3px #AAAAFF solid; padding: 5">
+		<A HREF="http://pocketirc.com/"><IMG SRC="images/pocketirc.gif" BORDER="0" ALT="Pocket IRC Ad" VSPACE="10" HSPACE="10"></A>
+	</TD>
+</TR>
+</TABLE>
+
+<H3>Welcome to Version 2.0 of theForger's Win32 API Tutorial</H3>
+
+<P>
+This tutorial attempts to get you started developing with the Win32
+API as quickly and clearly as possible. <B>It is meant to be read as a whole</B>, so 
+<I>please</I> read it from beginning to end before asking questions... most of them will probably
+be answered.  Each section builds on the sections before it.  I have also added some solutions
+to common errors in Appendix A.  If you ask me a question that is answered on this page, you will
+look very silly.
+
+<P>
+<UL>
+<LI>Download the complete example <A HREF="files/source.zip">Source Code</A> which is 
+refered to throughout this document.  
+<LI>Or <A HREF="http://winprog.org/tutorial/files/forgers-win32-tutorial.zip">Download the entire tutorial</A> (source included) 
+for browsing in the convenience of your own harddrive.  This file may not include minor changes such
+as spelling corrections that are present on the website.
+</UL>
+<P>
+
+If you are viewing this locally or on another website, visit the #winprog website for the
+<A HREF="http://winprog.org/tutorial/" TARGET="_new">current official copy</A>.
+
+<UL>
+<LI><A HREF="#donate">Feeling generous?</A></LI>
+<LI><A HREF="#help">Need more help?</A></LI>
+</UL>
+
+<H1>Contents</H1>
+
+<UL>
+<LI>Basics
+	<OL>
+	<LI><A HREF="start.html">Getting Started</A>
+	<LI><A HREF="simple_window.html">A Simple Window</A>
+	<LI><A HREF="window_click.html">Handling Messages</A>
+	<LI><A HREF="message_loop.html">Understanding The Message Loop</A>
+	<LI><A HREF="resources.html">Using Resources</A>
+	<LI><A HREF="menus.html">Menus and Icons</A>
+	<LI><A HREF="dialogs.html">Dialogs, GUI coders best friend</A>
+	<LI><A HREF="modeless_dialogs.html">Modeless Dialogs</A>
+	<LI><A HREF="controls.html">Standard Controls: Button, Edit, List Box, Static</A>
+	<LI><A HREF="dlgfaq.html">But what about... (Dialog FAQ)</A>
+	</OL>
+<LI>Creating a simple application
+	<OL>
+	<LI><A HREF="app_one.html">App Part 1: Creating controls at runtime</A>
+	<LI><A HREF="app_two.html">App Part 2: Using files and the common dialogs</A>
+	<LI><A HREF="app_three.html">App Part 3: Tool and Status bars</A>
+	<LI><A HREF="app_four.html">App Part 4: Multiple Document Interface</A>
+	</OL> 
+<LI>Graphics Device Interface
+	<OL>
+	<LI><A HREF="bitmaps.html">Bitmaps, Device Contexts and BitBlt</A>
+	<LI><A HREF="transparency.html">Transparent Bitmaps</A>
+	<LI><A HREF="animation.html">Timers and Animation</A>
+	<LI><A HREF="fonts.html">Text, Fonts and Colours</A>
+	</OL>
+<LI>Tools and Documentation
+	<OL>
+	<LI><A HREF="references.html">Recommended Books and References</A>
+	<LI><A HREF="msvc.html">Free Visual C++ Command Line Tools</A>
+	<LI><A HREF="bcpp.html">Free Borland C++ Command Line Tools</A>
+	</OL>
+<LI>Appendices
+	<UL>
+	<LI><A HREF="errors.html">Appendix A: Solutions to Common Errors</A>
+	<LI><A HREF="apivsmfc.html">Appendix B: Why you should learn the API before MFC</A>
+	<LI><A HREF="resnotes.html">Appendix C: Resource file notes</A>
+	</UL>
+</UL>
+
+<P>
+<I>I've had reports that the source code presented in the documents itself doesn't display line
+breaks properly in very old versions of Netscape, if you encounter this problem please refer 
+to the code in the source files included in the zip download.
+</I>
+
+<A NAME="donate"><H3>Feeling generous?</H3></A>
+<!-- Begin PayPal Logo -->
+<A HREF="https://www.paypal.com/xclick/business=forger%40winprog.org&item_name=theForger%27s+Win32+API+Programming+Tutorial&no_shipping=1" TARGET="_blank"><IMG SRC="http://images.paypal.com/images/x-click-but04.gif" HSPACE="10" ALT="Donate with PayPal - it's fast, free and secure!" ALIGN="left"></A>
+<!-- End PayPal Logo -->
+
+You may use this tutorial for absolutely no charge, however there are costs associated with
+hosting it on the web.  If you found it to be of use to you and want to give something back, I 
+would be grateful for donations of any amount to help pay for this website. This page gets approximately 
+15,000 hits a month, and it adds up after a while :)
+<P>
+Once again, there is absolutely no obligation to pay, and you won't get anything in addition
+to what's already here, but if you want to help out, that would be great... just click the PayPal
+image.
+<P>
+Enjoy the tutorial,<BR>
+Brook
+
+<P>
+<I>I would like to thank the following for the contributions they've made: 
+Yih Horng, Todd Troxell, T Frank Zvovushe, Suzanne Lorrin, Seth McCarus, Crispina Chong,
+John Crutchfield, Scott Johnstone, Patrick Sears, Juan Demerutis, Richard Anthony, Alex Fox, 
+Bob Rudis, Eric Wadsworth, Chris Blume.
+As well as those who have simply written to say they've found the tutorial useful.
+It's much appreciated!</I>
+</P>
+
+<A NAME="help"><H3>Need more help?</H3></A>
+
+<!-- Begin PayPal Logo -->
+<!-- <A HREF="https://www.paypal.com/xclick/business=forger%40winprog.org&item_name=Custom+Win32+Code+Request&no_shipping=1&cn=Additional+Notes+%28optional%29" TARGET="_blank"><IMG SRC="http://images.paypal.com/images/x-click-but02.gif" HSPACE="10" ALT="Donate with PayPal - it's fast, free and secure!" ALIGN="left"></A> -->
+<!-- End PayPal Logo -->
+
+In general I will freely answer any questions that I receive by email, or point you in the direction of
+a resource that may be of assistance.
+
+<P>
+At the moment I am busy with a couple of large ongoing projects and don't have the time to work on custom examples
+or small software projects.  I would however be willing to entertain job offers :)
+
+<P>
+Feel free to <A HREF="mailto:forger(nospam)winprog.org">contact me</A>.
+
+<HR>
+<FONT SIZE="-1">
+Copyright &copy; 1998-2003, Brook Miles (<A HREF="mailto:forger(nospam)winprog.org">theForger</A>).  All rights reserved.
+</FONT>
+
+<SCRIPT language="JavaScript">
+<!--
+   var re = /\(nospam\)/ig;
+   var str;
+
+   for(i = 0;i < document.links.length;i++) 
+   {
+      str = "" + document.links(i).href;
+      if(str.search(re) != -1)
+         document.links(i).href = str.replace(re, "@");
+
+      str = "" + document.links(i).innerHTML;
+      if(str.search(re) != -1)
+         document.links(i).innerHTML = str.replace(re, "@");
+   }
+-->
+</SCRIPT>
+
+</BODY>
+</HTML>
